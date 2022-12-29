@@ -1,97 +1,193 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome To your Deshboard.</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    body {
+      background-color: #f3f5f9;
+    }
+
+    .wrapper {
+      display: flex;
+      position: relative;
+    }
+
+    .wrapper .sidebar {
+      width: 200px;
+      height: 100%;
+      background: #4b4276;
+      padding: 30px 0px;
+      position: fixed;
+    }
+
+    .wrapper .sidebar h2 {
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .wrapper .sidebar ul li {
+      padding: 15px;
+      border-bottom: 1px solid #bdb8d7;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .wrapper .sidebar ul li a {
+      color: #bdb8d7;
+      display: block;
+    }
+
+    .wrapper .sidebar ul li a .fas {
+      width: 25px;
+    }
+
+    .wrapper .sidebar ul li:hover {
+      background-color: #594f8d;
+    }
+
+    .wrapper .sidebar ul li:hover a {
+      color: #fff;
+    }
+
+    .wrapper .sidebar .social_media {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+
+    .wrapper .sidebar .social_media a {
+      display: block;
+      width: 40px;
+      background: #594f8d;
+      height: 40px;
+      line-height: 45px;
+      text-align: center;
+      margin: 0 5px;
+      color: #bdb8d7;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .wrapper .main_content {
+      width: 100%;
+      margin-left: 200px;
+    }
+
+    .wrapper .main_content .header {
+      padding: 20px;
+      background: #fff;
+      color: #717171;
+      border-bottom: 1px solid #e0e4e8;
+    }
+
+    .wrapper .main_content .info {
+      margin: 20px;
+      color: #717171;
+      line-height: 25px;
+    }
+
+    .wrapper .main_content .info div {
+      margin-bottom: 20px;
+    }
+
+    @media (max-height: 500px) {
+      .social_media {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
-<body class=" w-3/4 text-center mt-2 grid justify-items-stretch">
 
-<aside class="w-64" aria-label="Sidebar">
-   <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
-      <ul class="space-y-2">
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-               <span class="ml-3">Dashboard</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Kanban</span>
-               <span class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
-               <span class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200">3</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Products</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
-            </a>
-         </li>
+<body>
+  <!-- Sidebar Start -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+    integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2>MSP Bank Ltd.</h2>
+      <ul>
+        <li><a href="">Home <i class="fas fa-home"></i></a></li>
+        <li><a target="_blank" href="withdraw.html">Withdraw <i class="fa-solid fa-money-simple-from-bracket"></i></a>
+        </li>
+        <li><a target="_blank" href="deposit.html">Deposit <i class="fa-solid fa-money-from-bracket"></i></i></a></li>
+        <li><a href="#">Transaction History <i class="fas fa-history"></i></a></li>
+        <li><a href="#">Contact <i class="fa-regular fa-address-card"></i></a></li>
+        <li><a target="_blank" href="login.html">Log Out <i class="fas fa-sign-out"></i></a></li>
       </ul>
-   </div>
-</aside>
+      <div class="social_media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="info">
+        <div class="main">
+          <h1 class="text-3xl font-bold text-center ">welcome to your dashboard!!</h1>
+          <main class="mx-auto">
+            <section class="">
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div id="deposit" class="bg-blue-400 mt-10 p-12 rounded">
+                  <h3 class="text-white text-2xl">Deposit</h3>
+                  <h2 class="text-white text-4xl">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div id="withdraw" class="bg-green-400 mt-10 p-8 rounded">
+                  <h3 class="text-white text-2xl">Withdraw</h3>
+                  <h2 class="text-white text-4xl">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div id="total" class="bg-yellow-400 mt-10 p-8 rounded">
+                  <h3 class="text-white text-2xl">Total</h3>
+                  <h2 class="text-white text-4xl">$<span id="balance-total">1240</span></h2>
+                </div>
+              </div>
+            </section>
 
-  <div class="main">
-    <h1 class="text-3xl font-bold ">welcome to your dashboard!!</h1>
-  <main class="mx-auto">
-    <section class="">
-        <div class="grid grid-cols-3 gap-4 text-center">
-            <div id="deposit" class="bg-blue-400 mt-10 p-12 rounded">
-                <h3 class="text-white text-2xl">Deposit</h3>
-                <h2 class="text-white text-4xl">$<span id="deposit-total">00</span></h2>
+          </main>
+          <div class="grid grid-cols-2 gap-3 text-left">
+            <div class=" p-10 mt-10 bg-blue-200 rounded">
+              <h3 class="text-bold mb-3">Please Deposit</h3>
+              <input id="user-deposit" class="border-2 bg-blue-100 rounded text-black border-gray-400 mb-5 px-3"
+                type="text" placeholder="$ Enter your Amount"><br>
+              <button id="deposit-btn" class=" bg-blue-400 text-white p-2 rounded ">Deposit</button>
             </div>
-            <div id="withdraw" class="bg-green-400 mt-10 p-8 rounded">
-                <h3 class="text-white text-2xl">Withdraw</h3>
-                <h2 class="text-white text-4xl">$<span id="withdraw-total">00</span></h2>
+            <div class=" p-10 mt-10 bg-green-200 rounded">
+              <h3 class="text-bold mb-3">Please Withdraw</h3>
+              <input id="user-withdraw" class="border-2 rounded border-gray-400 mb-5 px-3" type="text"
+                placeholder="$ Enter your Amount"><br>
+              <button id="withdraw-btn" class=" bg-green-400 text-white p-2 rounded ">Withdraw</button>
             </div>
-            <div id="total" class="bg-yellow-400 mt-10 p-8 rounded">
-                <h3 class="text-white text-2xl">Total</h3>
-                <h2 class="text-white text-4xl">$<span id="balance-total">1240</span></h2>
-            </div>
+          </div>
+
         </div>
-    </section>
-        
-  </main>
-  <div class="grid grid-cols-2 gap-3 text-left">
-    <div class=" p-10 mt-10 bg-blue-200 rounded">
-      <h3 class="text-bold mb-3">Please Deposit</h3>
-        <input id="user-deposit" class="border-2 bg-blue-100 rounded text-black border-gray-400 mb-5 px-3" type="text" placeholder="$ Enter your Amount"><br>
-        <button id="deposit-btn" class=" bg-blue-400 text-white p-2 rounded ">Deposit</button>
-    </div>
-    <div class=" p-10 mt-10 bg-green-200 rounded">
-      <h3 class="text-bold mb-3">Please Withdraw</h3>
-        <input id="user-withdraw" class="border-2 rounded border-gray-400 mb-5 px-3" type="text" placeholder="$ Enter your Amount"><br>
-        <button id="withdraw-btn" class=" bg-green-400 text-white p-2 rounded ">Withdraw</button>
+      </div>
     </div>
   </div>
-  
-  </div>
+  <!-- Sidebar End -->
+
 </body>
+
 </html>

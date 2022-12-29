@@ -17,6 +17,7 @@ exports.register = (req, res) => {
                 massage: 'that email is already taken'
             })
         }
+       
         else if (password !== confirmpassword) {
             return res.render('register', {
                 massage: 'password does not match'
@@ -83,13 +84,7 @@ exports.login = (req, res,) => {
                 massage: 'logged in successfully',
                 user:result[0],
                 token
-            })
-            //    return res.status(200).send({
-            //     msg:"logged in successfully",
-            //     user:result[0],
-            //     token
-            //  })
-        
+            })      
           })
     })
 

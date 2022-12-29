@@ -16,10 +16,7 @@ app.use(express.json());
 
 
 app.set('view engine', 'hbs');
-
-const publicDirectory = path.join('__dirname', 'public');
-
-app.use(express.static(publicDirectory));
+app.use(express.static(path.join(__dirname , 'public')));
 
 app.use('/',require('./routes/pages'));
 app.use('/auth',require('./routes/auth'));
