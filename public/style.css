@@ -105,3 +105,50 @@ body{
     display: none !important;
   }
 }
+#deposit{
+  background-color: #FBCD6E;
+  color: black;
+  border-radius: 5px;
+}
+#withdraw{
+  background-color: #C8F2C3;
+  color: black;
+  border-radius: 5px;
+
+}
+#Balance{
+  background-color: #0B615B;
+  color: white;
+  border-radius: 5px;
+}
+
+.depositdiv{
+  background-color: #FBCD6E;
+  color: black;
+}
+.withdrawdiv{
+  background-color:#C8F2C3 ;
+  color: black;
+}
+
+.depositbtn{
+  background-color: #0B615B;
+  
+
+}
+.withdrawbtn{
+  background-color: #0B615B;
+}
+.dashboard{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.alertdiv{
+  width: 25%;
+  margin: auto;
+  
+}
+
+

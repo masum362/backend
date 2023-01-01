@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transection History</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Sidebar Start -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+    integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2>MSP Bank Ltd.</h2>
+      <ul>
+        <li><a href="../dashboard">Home <i class="fas fa-home"></i></a></li>
+        <li><a target="" href="../withdraw"> Withdraw <i class="fa-regular fa-credit-card"></i></a>
+        </li>
+        <li><a target="" href="../deposit"> Deposit <i class="fa-solid fa-coins"></i></a></li>
+        <li><a href="">Transaction History <i class="fas fa-history"></i></a></li>
+        <li><a href="../contact">Contact <i class="fa-regular fa-message"></i></a></li>
+        <li><a href="../account">Account <i class="fa-regular fa-address-card"></i></a></li>
+        <li><a target="" href="login">Log Out <i class="fas fa-sign-out"></i></a></li>
+      </ul>
+      <div class="social_media">
+        <a target="_blank" href="https://www.facebook.com/md.masum.ahmed.mk"><i class="fab fa-facebook-f"></i></a>
+        <a target="_blank" href="https://twitter.com/MASUMAH80939468"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/md.masum650/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="info">
+        <div class="main">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Serial No.</th>
+                <th>Deposit</th>
+                <th>Withdraw</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#data}}
+              <tr>
+                <th>{{id}}</th>
+                <td>{{deposit}}</td>
+                <td>{{withdraw}}</td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

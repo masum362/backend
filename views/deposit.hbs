@@ -1,17 +1,17 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>withdraw</title>
+    <title>Deposit</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-
     <!-- Sidebar Start -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
         integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
@@ -22,13 +22,13 @@
             <h2>MSP Bank Ltd.</h2>
             <ul>
                 <li><a href="../dashboard">Home <i class="fas fa-home"></i></a></li>
-                <li><a target="" href=""> Withdraw <i class="fa-regular fa-credit-card"></i></a>
+               <li><a target="" href="../withdraw"> Withdraw <i class="fa-regular fa-credit-card"></i></a>
                 </li>
-                <li><a target="" href="../deposit"> Deposit <i class="fa-solid fa-coins"></i></a></li>
+               <li><a target="" href=""> Deposit <i class="fa-solid fa-coins"></i></a></li>
                 <li><a href="../transection_history">Transaction History <i class="fas fa-history"></i></a></li>
-                <li><a href="contact">Contact <i class="fa-regular fa-message"></i></a></li>
+                <li><a href="../contact">Contact <i class="fa-regular fa-message"></i></a></li>
                 <li><a href="../account">Account <i class="fa-regular fa-address-card"></i></a></li>
-                <li><a target="" href="login">Log Out <i class="fas fa-sign-out"></i></a></li>
+                <li><a target="" href="login">Log Out <i class="fas fa-sign-out"></i></a></li>li>
             </ul>
             <div class="social_media">
                 <a target="_blank" href="https://www.facebook.com/md.masum.ahmed.mk"><i
@@ -40,11 +40,11 @@
         <div class="main_content">
             <div class="info">
                 <div class="main">
-                    <h1 class="text-3xl font-bold text-center ">Amount you withdrawen!!</h1>
-                    {{!-- alert --}}
-                    {{#if msgwithdraw1}}
+                    <h1 class="text-3xl font-bold text-center">Amount you deposited !!</h1>
+                                        {{!-- alert --}}
+                    {{#if msgdeposit1}}
                     <div class="alertdiv bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                        <strong class="font-bold">{{msgwithdraw1}}</strong>
+                        <strong class="font-bold">{{msgdeposit1}}</strong>
                         <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                             <svg class="fill-current h-6 w-6 text-red-500" role="button"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -55,9 +55,9 @@
                         </span>
                     </div>
                     ]{{/if}}
-                    {{#if msgwithdraw2}}
+                    {{#if msgdeposit2}}
                     <div class="alertdiv bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                        <strong class="font-bold">{{msgwithdraw2}}</strong>
+                        <strong class="font-bold">{{msgdeposit2}}</strong>
                         <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                             <svg class="fill-current h-6 w-6 text-red-500" role="button"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -68,31 +68,16 @@
                         </span>
                     </div>
                     ]{{/if}}
-                    {{#if msgwithdraw2}}
-                    <div class="alertdiv bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                        <strong class="font-bold">{{msgwithdraw3}}</strong>
-                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                            <svg class="fill-current h-6 w-6 text-red-500" role="button"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <title>Close</title>
-                                <path
-                                    d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-                            </svg>
-                        </span>
-                    </div>
-                    {{/if}}
                     {{!-- alert --}}
-
                     <main class="mx-auto">
                         <section class="">
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <div id="withdraw" class="bg-green-400 mt-10 p-8 rounded">
-                                    <h3 class=" text-2xl">Last Withdrawal Amount</h3>
-                                    <h2 class=" text-4xl">$<span id="withdraw-total">
+                                <div id="deposit" class="bg-blue-400 mt-10 p-12 rounded">
+                                    <h3 class=" text-2xl">Last Deposited Amount</h3>
+                                    <h2 class=" text-4xl">$<span id="deposit-total">
                                         {{#data}}
-                                        {{withdraw}}
+                                        {{deposit}}
                                         {{/data}}
-
                                     </span></h2>
                                 </div>
                                 <div id="Balance" class="bg-yellow-400 mt-10 p-8 rounded">
@@ -100,21 +85,23 @@
                                     <h2 class=" text-4xl">$<span id="balance-total">
                                         {{#data}}
                                         {{total_amount}}
-                                        {{/data}}</span></h2>
+                                        {{/data}}
+                                    </span></h2>
                                 </div>
                             </div>
                         </section>
 
                     </main>
                     <div class="grid grid-cols-2 gap-3 text-left">
-                        <form action="./auth/withdraw_amount" method="post">
-                            <div class=" p-10 mt-10 withdrawdiv rounded">
-                                <h3 class="text-bold mb-3">Please Withdraw</h3>
-                                <input id="user-withdraw" class="border-2 rounded border-gray-400 mb-5" type="text"
-                                    placeholder="$ Enter your Amount" name="withdraw"><br>
-                                <button id="withdraw-btn " class="withdrawbtn text-white p-2 rounded ">Withdraw</button>
-                            </div>
-                        </form>
+                        <div class=" p-10 mt-10 depositdiv rounded">
+                            <h3 class="text-bold mb-3">Please Deposit</h3>
+                            <form action="./auth/deposit_Amount" method="post">
+                                <input id="user-deposit"
+                                    class="border-2 bg-blue-100 rounded text-black border-gray-400 mb-5 w-50"
+                                    type="text" placeholder="$ Enter your Amount" name="deposit"><br>
+                                <button id="deposit-btn " class="depositbtn text-white p-2 rounded ">Deposit</button>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
@@ -122,8 +109,7 @@
         </div>
     </div>
     <!-- Sidebar End -->
-
-
+   
 </body>
 
 </html>

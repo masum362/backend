@@ -5,8 +5,6 @@ const dotenv = require('dotenv');
 const db = require('./database/connection');
 const auth = require('./routes/secret-route');
 
-
-
 const app = express();
 
 dotenv.config({ path: './.env'});

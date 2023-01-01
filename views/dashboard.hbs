@@ -4,144 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome To your Deshboard.</title>
+  <title>Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style: none;
-      text-decoration: none;
-      font-family: 'Josefin Sans', sans-serif;
-    }
-
-    body {
-      background-color: #f3f5f9;
-    }
-
-    .wrapper {
-      display: flex;
-      position: relative;
-    }
-
-    .wrapper .sidebar {
-      width: 200px;
-      height: 100%;
-      background: #4b4276;
-      padding: 30px 0px;
-      position: fixed;
-    }
-
-    .wrapper .sidebar h2 {
-      color: #fff;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .wrapper .sidebar ul li {
-      padding: 15px;
-      border-bottom: 1px solid #bdb8d7;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .wrapper .sidebar ul li a {
-      color: #bdb8d7;
-      display: block;
-    }
-
-    .wrapper .sidebar ul li a .fas {
-      width: 25px;
-    }
-
-    .wrapper .sidebar ul li:hover {
-      background-color: #594f8d;
-    }
-
-    .wrapper .sidebar ul li:hover a {
-      color: #fff;
-    }
-
-    .wrapper .sidebar .social_media {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-    }
-
-    .wrapper .sidebar .social_media a {
-      display: block;
-      width: 40px;
-      background: #594f8d;
-      height: 40px;
-      line-height: 45px;
-      text-align: center;
-      margin: 0 5px;
-      color: #bdb8d7;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-
-    .wrapper .main_content {
-      width: 100%;
-      margin-left: 200px;
-    }
-
-    .wrapper .main_content .header {
-      padding: 20px;
-      background: #fff;
-      color: #717171;
-      border-bottom: 1px solid #e0e4e8;
-    }
-
-    .wrapper .main_content .info {
-      margin: 20px;
-      color: #717171;
-      line-height: 25px;
-    }
-
-    .wrapper .main_content .info div {
-      margin-bottom: 20px;
-    }
-
-    @media (max-height: 500px) {
-      .social_media {
-        display: none !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../style.css">
+  
 </head>
 
 <body>
   <!-- Sidebar Start -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
-    integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <div class="wrapper">
     <div class="sidebar">
       <h2>MSP Bank Ltd.</h2>
       <ul>
         <li><a href="">Home <i class="fas fa-home"></i></a></li>
-        <li><a target="_blank" href="withdraw.html">Withdraw <i class="fa-solid fa-money-simple-from-bracket"></i></a>
-        </li>
-        <li><a target="_blank" href="deposit.html">Deposit <i class="fa-solid fa-money-from-bracket"></i></i></a></li>
-        <li><a href="#">Transaction History <i class="fas fa-history"></i></a></li>
-        <li><a href="#">Contact <i class="fa-regular fa-address-card"></i></a></li>
-        <li><a target="_blank" href="login.html">Log Out <i class="fas fa-sign-out"></i></a></li>
+               <li><a target="" href="../../withdraw"> Withdraw <i class="fa-regular fa-credit-card"></i></a>
+                </li>
+                <li><a target="" href="../deposit"> Deposit <i class="fa-solid fa-coins"></i></a></li>
+                <li><a href="../transection_history">Transaction History <i class="fas fa-history"></i></a></li>
+                <li><a href="../contact">Contact <i class="fa-regular fa-message"></i></a></li>
+                <li><a href="../account">Account <i class="fa-regular fa-address-card"></i></a></li>
+                <li><a target="" href="login">Log Out <i class="fas fa-sign-out"></i></a></li>
       </ul>
       <div class="social_media">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.facebook.com/md.masum.ahmed.mk"><i class="fab fa-facebook-f"></i></a>
+        <a target="_blank" href="https://twitter.com/MASUMAH80939468"><i class="fab fa-twitter"></i></a>
+        <a  target="_blank" href="https://www.instagram.com/md.masum650/"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
     <div class="main_content">
@@ -149,39 +43,43 @@
         <div class="main">
           <h1 class="text-3xl font-bold text-center ">welcome to your dashboard!!</h1>
           <main class="mx-auto">
-            <section class="">
-              <div class="grid grid-cols-3 gap-4 text-center">
+            <section class="dashboard">
+              <div class="d-flex flex-column gap-4 text-center">
                 <div id="deposit" class="bg-blue-400 mt-10 p-12 rounded">
-                  <h3 class="text-white text-2xl">Deposit</h3>
-                  <h2 class="text-white text-4xl">$<span id="deposit-total">00</span></h2>
+                  <h3 class="text-2xl">Total Deposit</h3>
+                  <h2 class=" text-4xl">$<span id="deposit-total">
+                    
+                    {{#data}}
+                   {{total_deposit}}
+                    {{/data}}
+
+
+                  </span></h2>
                 </div>
                 <div id="withdraw" class="bg-green-400 mt-10 p-8 rounded">
-                  <h3 class="text-white text-2xl">Withdraw</h3>
-                  <h2 class="text-white text-4xl">$<span id="withdraw-total">00</span></h2>
+                  <h3 class=" text-2xl">Total Withdraw</h3>
+                  <h2 class=" text-4xl">$<span id="withdraw-total">
+
+                    {{#data}}
+                   {{total_withdraw}}
+                    {{/data}}
+
+                  </span></h2>
                 </div>
-                <div id="total" class="bg-yellow-400 mt-10 p-8 rounded">
-                  <h3 class="text-white text-2xl">Total</h3>
-                  <h2 class="text-white text-4xl">$<span id="balance-total">1240</span></h2>
+                <div id="Balance" class="bg-yellow-400 mt-10 p-8 rounded">
+                  <h3 class="text-white text-2xl">Balance</h3>
+                  <h2 class="text-white text-4xl">$<span id="balance-total">
+
+                    {{#data}}
+                   {{total_amount}}
+                    {{/data}}
+
+                  </span></h2>
                 </div>
               </div>
             </section>
 
           </main>
-          <div class="grid grid-cols-2 gap-3 text-left">
-            <div class=" p-10 mt-10 bg-blue-200 rounded">
-              <h3 class="text-bold mb-3">Please Deposit</h3>
-              <input id="user-deposit" class="border-2 bg-blue-100 rounded text-black border-gray-400 mb-5 px-3"
-                type="text" placeholder="$ Enter your Amount"><br>
-              <button id="deposit-btn" class=" bg-blue-400 text-white p-2 rounded ">Deposit</button>
-            </div>
-            <div class=" p-10 mt-10 bg-green-200 rounded">
-              <h3 class="text-bold mb-3">Please Withdraw</h3>
-              <input id="user-withdraw" class="border-2 rounded border-gray-400 mb-5 px-3" type="text"
-                placeholder="$ Enter your Amount"><br>
-              <button id="withdraw-btn" class=" bg-green-400 text-white p-2 rounded ">Withdraw</button>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
