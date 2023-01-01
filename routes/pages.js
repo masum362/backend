@@ -15,22 +15,22 @@ Router.get('/login',(req, res) => {
     res.render("login");
 
 });
-// Router.get('/dashboard', (req, res) => {
-//     const qry = 'SELECT deposit,withdraw,SUM(deposit) AS total_deposit , SUM(withdraw) AS total_withdraw , SUM(deposit)-SUM(withdraw) AS total_amount FROM money'
-//     db.query(qry, (err, results) => {
-//         if(err){
-//           return console.log(err);
-//         }
-//         else{
-//          return res.render('dashboard',{
-//             data: results
+Router.get('/dashboard',auth, (req, res) => {
+    const qry = 'SELECT deposit,withdraw,SUM(deposit) AS total_deposit , SUM(withdraw) AS total_withdraw , SUM(deposit)-SUM(withdraw) AS total_amount FROM money'
+    db.query(qry, (err, results) => {
+        if(err){
+          return console.log(err);
+        }
+        else{
+         return res.render('dashboard',{
+            data: results
 
-//         })
-//     }
+        })
+    }
 
-//     })
+    })
     
-// });
+});
 
   Router.get('/deposit',auth,(req, res) => {
 
